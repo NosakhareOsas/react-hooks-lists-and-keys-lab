@@ -1,4 +1,5 @@
 import React from "react";
+import { nanoid } from 'nanoid';
 
 function ProjectItem({ name, about, technologies }) {
   return (
@@ -7,6 +8,7 @@ function ProjectItem({ name, about, technologies }) {
       <p>{about}</p>
       <div className="technologies">
         {/* render a <span> for each technology in the technologies array */}
+        {technologies.map((technology) => <span key = {nanoid(5)}>{technology}</span>)}
       </div>
     </div>
   );
